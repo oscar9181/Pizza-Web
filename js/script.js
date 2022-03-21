@@ -47,7 +47,7 @@ $(document).ready(function() {
     });
     $(".checkout-btn").click(function() {
         amountt = amountt + total;
-        $(".amount h3 span").html(amount)
+        $(".amountt h3 span").html(amountt)
        var answer= prompt("Thanks for placing your order it will be  delivered to you as soon as possible!")
         if (answer =="yes") {var location=prompt("enter your location")
         alert("your order will get to you in a few minutes at " + location + "your total amount is " +(amountt + 150))}
