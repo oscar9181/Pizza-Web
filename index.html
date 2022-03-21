@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Palace</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+    
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+            
+ 
+  <div class="navbar-nav" id="top">
+    <a class="nav-item nav-link active" href="#top">HOME </a>
+    <a class="nav-item nav-link" href="#menu">MENU</a>
+    <a class="nav-item nav-link" href="#contact">CONTACT</a>
+    
+  
+  </div>
+</div>
+
+            
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <h1>LUIJI'S PIZZA TOSS PIZZERIA</h1>
+    <p>Who does not want a taste of our heavenly slice of pizza that changes your whole mood of the day and lives you lightened.What 
+        are you waiting for place your order right here in luiji's pizza palace </p>
+
+                </div>
+            </div>
+            <h4>MENU</h4>
+            <div class="case">ENTER PREFFERENCE BELOW TO ORDER AND LOCATION FOR DELIVERIES</div>
+            <div class="container">
+              <div class="row align-items-start">
+                <div class="col">
+                  <h2>SIZE</h2>
+                  <div class="pizza" >
+                    <select class="size">
+                      <option label="large" value="1200" >large</option>
+                        <option label="medium" value="1000">Medium</option>
+                        <option label="small" value="800">small</option>
+                      </select>
+          
+                    
+                  </div>
+                 
+                </div>
+                <div class="col">
+                  <h3>CRUST</h3>
+                  <div class="pizza">
+                  <select class="crust">
+                    <option label="cripsy" value="250" >cripsy</option>
+                      <option label="stuffed" value="110">stuffed</option>
+                      <option label="glutten free" value="170">glutten free</option>
+                    </select>
+                  </div>
+                 </div>
+                 </div>
+                 <div class="row align-items-start">
+                  <div class="col">
+                    <h4>TOPPINGS</h4>
+                    <div class="pizza">
+                      <select class="toppings">
+                        <option label="pork" value="250" >pork</option>
+                          <option label="chillipepper" value="200">chillipepper</option>
+                          <option label="beef" value="150">beef</option>
+                        </select>
+                    </div>
+                     </div>
+                  <div class="col">
+                    <h5>CLICK BUTTON</h5>
+                      <button class="order" type="submit">Order</button>
+                  </div>
+                 </div>
+          
+             <div class="tend">YOUR ORDERS</div>
+             <table class="table">
+              <th>
+                <tr>
+                  <th scope="col">order number</th>
+                  <th scope="col">pizza size</th>
+                  <th scope="col">crust</th>
+                  <th scope="col">toppings</th>
+                  <th scope="col">total</th>
+                </tr>
+               </th>
+               <tbody id="pizza">
+                <tr>
+                  <th scope="row">1</th>
+                  <td id="size"></td>
+                  <td id="toppings"></td>
+                  <td id="crust"></td>
+                  <td id="total"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pick">
+              <div class="chief">
+                <button class="add-btn" type="submit">Add order</button>
+                <div class="delivery" id="deliver">
+                  <div class="amount" id="charge">
+                    <h3>Total amount: <span></span></h3>
+                   </div>
+          
+                  <h5>Thanks for placing your order it will be  delivered to you as soon as possible!</h5>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      YES
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      NO
+                    </label>
+                  </div>
+          
+                  <div class="location">
+                    <input type="text" placeholder="Input location for delivery" required />
+                    <button class="enter-btn" type="submit">Enter</button>
+                  </div>
+                </div>
+                
+              </div>
+              <div>
+                <button class="checkout-btn" type="submit">Checkout</button>
+              </div>
+            </div>
+          
+          
+            <div class="modify">
+            <div class="row align-items-start">
+              <div class="col">
+                <h6>ONLINE SERVICE</h6>
+                <address>
+                  <p> Number-0726879170</p>
+                
+                </address>
+              </div>
+              <div class="col">
+                <div id="location">
+                  <em>LUIJI'S PIZZA</em><br>
+                  Nairobi,Ngong Road<br>
+                  Nairobi, 9181-Nairobi<br>
+                </div>
+               
+              </div>
+            </div>
+              </div>
+ <script src=
+ "https://code.jquery.com/jquery-3.6.0.js"
+ integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+ crossorigin="anonymous"></script>
+
+  <script src=js/script.js></script>
+</head>
+<body>
+    
