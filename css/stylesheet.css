@@ -31,7 +31,7 @@ display: flex;
 .container-fluid{
 
     height: 60vh;
-    background-image: url(https://raw.githubusercontent.com/oscar9181/Pizza-Web/gh-pages/css/images/topins.jpg);
+    background-image: url(https://raw.githubusercontent.com/oscar9181/Pizza-Web/gh-pages/images/topins.jpg);
     filter: blur(0px);
     background-repeat: no-repeat;
     background-size: cover;
