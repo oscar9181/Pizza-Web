@@ -1,64 +1,42 @@
 
   
-
-
-$(document).ready(function() {
-   
-    function pizza(size, toppings, crust, total, orderNumber) {
-        this.size = size;
-        this.toppings = toppings;
-        this.crust = crust;
-        this.total = total;
-        this.orderNumber = orderNumber;
-      }
-  
-  $('.order').click(function() {
-    var sizeOfPizza = $(".size option:selected").val();
-    var toppingsOfPizza = $(".toppings option:selected").val();
-    var crustOfPizza = $(".crust option:selected").val();
-    var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-    var order = 1;
-    var amountt=0;
-
-   
-
-    $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
-    $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
-    $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
-    $("#total").html(total);
+      $(document).ready(function () {
+        $("#pizzaOrdered").on("click", function (event) {
+          event.preventDefault();
+          var size = $("#pizzasize :selected").val();
+          var crust = $("#pizzacrust :selected").val();
+          var topping = $("#pizzatopping :selected").val();
+      
 
 
 
-    $('.add-btn').click(function() {
-      var sizeOfPizza = $(".size option:selected").val();
-      var toppingsOfPizza = $(".toppings option:selected").val();
-      var crustOfPizza = $(".crust option:selected").val();
-      var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-      order = order + 1;
-    
-      amountt = amountt + total;
+          total = parseInt(size) + parseInt(crust) + parseInt(topping);
+          alert(total);
+      
+          function Pizza(size, topping, crust, total) {
+            this.size = size;
+            this.topping = topping;
+            this.crust = crust;
+            this.total = total;
+          }
+          
+      
+          var newPizza = new Pizza(size, topping, crust, total);
+          var totalOrder = `<p>Total sh ${newPizza.total}</p>`;
+          var sizeOrder = `<p>Size sh ${newPizza.size}</p>`;
+          var crustOrder = `<p>Crust sh ${newPizza.crust}</p>`;
+          var toppingOrder = `<p>Topping sh ${newPizza.topping}</p>`;
+      
+          
+          $("#pizzerias").append(sizeOrder + crustOrder + toppingOrder + totalOrder);
+          var destination=prompt("Please input your destination")
+          alert("Your order has been recorded your pizza will be delivered as soon as possible Bon Appetite!"+ destination+ total)
 
-
-      var newPizza = new pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, total, order);
-
-      var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
-
-      $("#pizza").append(newRow);
-    });
-    $(".checkout-btn").click(function() {
-        amountt = amountt + total;
-        $(".amountt h3 span").html(amountt)
-       var answer= prompt("Thanks for placing your order it will be  delivered to you as soon as possible!")
-        if (answer =="yes") {var location=prompt("enter your location")
-        alert("your order will get to you in a few minutes at " + location + "your total amount is " +(amountt + 150))}
-   });
-    
-  });
-
-
-  
-});
-
+          
+        });
+      });
+     
+ 
 
 
 
